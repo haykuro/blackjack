@@ -173,11 +173,11 @@ def main():
             while player.calc_hand() < 21:
                 print player_line(player) ## before
                 user_in = raw_input('[H]it / [S]tand: ')
-                if user_in is "H":
+                if user_in in ['H', 'h']:
                     card = game.pull_card()
                     print 'HIT! [%s]' % (card)
                     player.addto_hand(card)
-                elif user_in is "S":
+                elif user_in in ['S', 's']:
                     print 'STAND!'
                     break
 
